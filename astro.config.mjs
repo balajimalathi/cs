@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 import netlify from '@astrojs/netlify';
+import starlightObsidian, { obsidianSidebarGroup } from 'starlight-obsidian'
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,15 +16,24 @@ export default defineConfig({
           sidebar: [
               {
                   label: 'Guides',
-                  items: [
-                      // Each item here is one entry in the navigation menu.
-                      { label: 'Example Guide', slug: 'guides/example' },
-                  ],
+                  autogenerate: { directory: 'guides' },
               },
               {
-                  label: 'Reference',
-                  autogenerate: { directory: 'reference' },
+                  label: 'Syllabus',
+                  autogenerate: { directory: 'syllabus' },
               },
+              // {
+              //     label: 'Mind Map',
+              //     autogenerate: { directory: 'mind-map' },
+              // },
+              obsidianSidebarGroup,
+          ],
+          plugins: [
+            // Generate the Obsidian vault pages.
+            starlightObsidian({
+              output: 'upsc',
+              vault: 'C:/Users/Anavi/Documents/upsc-vault',
+            }),
           ],
       }),
 	],
