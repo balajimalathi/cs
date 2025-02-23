@@ -33,6 +33,7 @@ export default defineConfig({
             starlightObsidian({
               output: 'upsc',
               vault: 'C:/Users/Anavi/Documents/upsc-vault',
+              skipGeneration: !!process.env['NETLIFY'],
             }),
           ],
       }),
