@@ -266,8 +266,6 @@ DBMS provides different interfaces for users to interact with the database:
 | **Security**           | Easier to manage but poses a **single point of failure**.           | More **complex security** measures needed due to multiple access points. |
 | **Examples**           | Single-user databases like **Microsoft Access**, **SQLite**.        | Enterprise systems like **MySQL**, **PostgreSQL**, **Oracle DB**.        |
 
-Would you like more details or examples? 😊
-
 ### Parallelism in Database Systems
 
 > Parallelism in databases affects performance and scalability:
