@@ -35,7 +35,7 @@ Entity-Relationship Diagram, Relational Model - Constraints, Languages, Design, 
 
 ***
 
-\[![Convert ER into table - Tpoint Tech](https://images.tpointtech.com/dbms/images/dbms-reduction-of-er-diagram-into-table.png)
+![Convert ER into table - Tpoint Tech](https://images.tpointtech.com/dbms/images/dbms-reduction-of-er-diagram-into-table.png)
 
 ### Relational Model
 
@@ -325,27 +325,22 @@ Relational Calculus is a **non-procedural query language**, meaning it specifies
 ### **Types of Relational Calculus**
 
 1. **Tuple Relational Calculus (TRC)**
-
    * Uses tuple variables and logical conditions.
-
    * **Notation:** `{t | Condition(t)}`
-
    * Example: Find students enrolled in course `CS101`:
 
-     ```sql
-     { t | t ∈ Student ∧ ∃ e ∈ Enrolled (e.SID = t.SID ∧ e.CID = 'CS101') }
-     ```
+```sql
+{ t | t ∈ Student ∧ ∃ e ∈ Enrolled (e.SID = t.SID ∧ e.CID = 'CS101') }
+```
+
 2. **Domain Relational Calculus (DRC)**
-
    * Uses domain variables instead of tuple variables.
-
    * **Notation:** `{<d1, d2, ..., dn> | Condition(d1, d2, ..., dn)}`
-
    * Example: Find student names with age > 20:
 
-     ```sql
-     { <Name> | ∃ Age, Dept ( <Name, Age, Dept> ∈ Student ∧ Age > 20) }
-     ```
+```sql
+{ <Name> | ∃ Age, Dept ( <Name, Age, Dept> ∈ Student ∧ Age > 20) }
+```
 
 ### **Key Differences: Relational Algebra vs. Relational Calculus**
 
@@ -362,29 +357,27 @@ Relational Calculus is a **non-procedural query language**, meaning it specifies
 
 Dr. Edgar F. Codd defined **12 rules** (often called **Codd's Rules**) to qualify a system as a **Relational Database Management System (RDBMS)**.
 
-| **Rule**                                      | **Description**                                                                                              |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Rule 0: Foundation Rule**                   | The system must manage databases **only** through relational capabilities.                                   |
-| **Rule 1: Information Rule**                  | All information must be stored in tables (relations).                                                        |
-| **Rule 2: Guaranteed Access**                 | Every data element must be accessible using a combination of table name, primary key, and column name.       |
-| **Rule 3: Systematic Null Handling**          | NULL values should be supported for missing or unknown information.                                          |
-| **Rule 4: Active Online Catalog**             | Metadata (schema, structure) must be stored in a relational format and accessible using queries.             |
-| **Rule 5: Comprehensive Data Sublanguage**    | The system must support a language (like SQL) for defining, querying, and modifying data.                    |
-| **Rule 6: View Updating**                     | Views should be updatable when logically possible.                                                           |
-| **Rule 7: High-Level Insert, Update, Delete** | The system must allow row-level and set-level operations, not just record-by-record modifications.           |
-| **Rule 8: Physical Data Independence**        | Changes in physical storage should not affect queries.                                                       |
-| **Rule 9: Logical Data Independence**         | Changes in schema (e.g., adding a column) should not affect applications using the database.                 |
-| **Rule 10: Integrity Independence**           | Integrity constraints must be definable within the database, not the application.                            |
-| **Rule 11: Distribution Independence**        | The database should work regardless of whether data is centralized or distributed across multiple locations. |
-| **Rule 12: Non-Subversion**                   | The system must prevent bypassing security and integrity constraints via low-level operations.               |
+| **Rule**                              | **Description**                                                                                                      |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Foundation Rule**                   | The system must manage databases **only through relational capabilities.**                                           |
+| **Information Rule**                  | All information must be **stored in tables (relations)**.                                                            |
+| **Guaranteed Access**                 | Every data element must be **accessible using a combination of table name, primary key, and column name.**           |
+| **Systematic Null Handling**          | **NULL values should be supported** for missing or unknown information.                                              |
+| **Active Online Catalog**             | Metadata (schema, structure) must be stored in a relational format and accessible using queries.                     |
+| **Comprehensive Data Sublanguage**    | The system must support a language (like SQL) for defining, querying, and modifying data.                            |
+| **View Updating**                     | Views should be **updatable when logically possible**.                                                               |
+| **High-Level Insert, Update, Delete** | The system must allow row-level and set-level operations, not just record-by-record modifications.                   |
+| **Physical Data Independence**        | Changes in **physical storage should not affect queries.**                                                           |
+| **Logical Data Independence**         | Changes in schema (e.g., adding a column) should not affect applications using the database.                         |
+| **Integrity Independence**            | Integrity constraints must be definable within the database, not the application.                                    |
+| **Distribution Independence**         | The database **should work regardless** of whether data is **centralized or distributed** across multiple locations. |
+| **Non-Subversion**                    | The system must **prevent bypassing security and integrity** constraints via low-level operations.                   |
 
 ### **Significance of Codd’s Rules**
 
-* **Ensures ACID compliance (Atomicity, Consistency, Isolation, Durability).**
-
-* **Enforces relational principles for better scalability and performance.**
-
-* **SQL-based databases like MySQL, PostgreSQL, and Oracle follow these rules.**
+* Ensures ACID compliance (Atomicity, Consistency, Isolation, Durability).
+* Enforces relational principles for better scalability and performance.
+* SQL-based databases like MySQL, PostgreSQL, and Oracle follow these rules.
 
 ***
 
@@ -395,5 +388,3 @@ Dr. Edgar F. Codd defined **12 rules** (often called **Codd's Rules**) to qualif
 | **Relational Algebra**  | A **procedural** query language using operations like Selection, Projection, Join, and Union.         |
 | **Relational Calculus** | A **non-procedural** query language using logical conditions (Tuple and Domain Calculus).             |
 | **Codd’s Rules**        | 12 rules defining a proper **Relational DBMS** to ensure data integrity, consistency, and efficiency. |
-
-Would you like **detailed SQL examples** for any of these topics? 😊
