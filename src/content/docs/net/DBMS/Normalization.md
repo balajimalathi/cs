@@ -151,8 +151,8 @@ A `StudentCourses` table that includes **Instructor Name**, which is dependent o
 
 ### **Condition:**
 
-* **Stronger version of 3NF**.
-* **Every determinant must be a candidate key**.
+* Stronger version of 3NF.
+* Every determinant must be a candidate key.
 
 ### **Violation Example**
 
@@ -362,10 +362,10 @@ Joins are expensive operations, so choosing the right join method is crucial.
 2. **Merge Join**
    * Used when both tables **are sorted on the join key**.
    * Example:
-     ```sql
-     SELECT * FROM Employees E JOIN Departments D ON E.DeptID = D.DeptID;
-     ```
-     * If both tables have indexes on `DeptID`, **merge join** is preferred.
+   ```sql
+   SELECT * FROM Employees E JOIN Departments D ON E.DeptID = D.DeptID;
+   ```
+   * If both tables have indexes on `DeptID`, **merge join** is preferred.
 
 3. **Hash Join**
    * Used when **both tables are large** and there are **no indexes**.

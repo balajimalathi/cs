@@ -3,7 +3,7 @@ title: Data Warehousing and Data Mining
 editUrl: false
 ---
 
-Data warehousing and data mining are critical components of modern database systems, enabling organizations to store, analyze, and extract insights from large datasets. Below is a structured overview of key concepts from *Database System Concepts* by Silberschatz, Korth, and Sudarshan, along with supplementary sources.
+Data warehousing and data mining are critical components of modern database systems, enabling organizations to store, analyze, and extract insights from large datasets.
 
 ***
 

@@ -9,7 +9,7 @@ editUrl: false
 Design, and Programming, Relational Database Schemas, Update Operations and Dealing with Constraint Violations; Relational Algebra and Relational Calculus; Codd Rules.
 
 **SQL:** Data Definition and Data Types; Constraints, Queries, Insert, Delete, and Update
-Statements; Views, Stored Procedures and Functions; Database Triggers, SQL Injection.
+Statements; Views, Stored Procedures and Functions; Database Triggers, [SQL Injection](/net/dbms/sql#8-sql-injection-security-concern).
 
 **Normalization for Relational Databases:** Functional Dependencies and Normalization; Algorithms for Query Processing and Optimization; Transaction Processing, Concurrency Control Techniques, Database Recovery Techniques, Object and Object-Relational Databases; Database Security and Authorization.
 
